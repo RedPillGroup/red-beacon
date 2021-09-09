@@ -1,0 +1,21 @@
+{
+  "name": "red-beacon",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
+    "babel-jest": "^27.1.1",
+    "jest": "^27.1.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "tsc"
+  }
+}
