@@ -12,15 +12,11 @@ interface ProbeSet<Type> {
     [index: string]: Type;
 }
 
-interface ProbeContext extends ProbeSet<boolean> {
-
-};
-
 /**
  * Define a probe interface
  */
 interface Probe {
-    serve(context: ProbeContext): void,
+    serve(context: ProbeSet<boolean>): void,
     shutdown(): void
 };
 
@@ -37,7 +33,7 @@ interface HttpProbeOpts {
  * A simple HTTP ProbeServer
  */
 class HttpProbe implements Probe {
-    private context: ProbeContext;
+    private context: ProbeSet<boolean>;
     private server: http.Server;
     private opts: any;
 
@@ -69,7 +65,7 @@ class HttpProbe implements Probe {
         });
     }
 
-    serve(context: ProbeContext) {
+    serve(context: ProbeSet<boolean>) {
         this.context = context;
         this.server.listen(this.opts.port);
     }
@@ -80,7 +76,7 @@ class HttpProbe implements Probe {
 }
 
 class RedBeacon {
-    private probeContext: ProbeContext;
+    private probeContext: ProbeSet<boolean>;
     private probe: Probe;
     private shutdownHandler: ShutdownHandler;
     private signalHandler: SignalHandler;
@@ -150,6 +146,6 @@ class RedBeacon {
     }
 };
 
-export type { Probe, ProbeContext, ShutdownHandler, HttpProbeOpts };
+export type { Probe, ProbeSet, ShutdownHandler, HttpProbeOpts };
 
 export { RedBeacon, HttpProbe };
