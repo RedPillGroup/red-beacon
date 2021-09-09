@@ -2,7 +2,6 @@
   "name": "red-beacon",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
