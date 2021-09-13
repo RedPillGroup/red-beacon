@@ -12,9 +12,13 @@
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.2"
   },
+<<<<<<< HEAD
   "files": [
     "./dist"
   ],
+=======
+  "files": ["dist/*"],
+>>>>>>> 93d2543dc1d762ddb303fc2772abe6fee1133603
   "repository": {
     "type": "git",
     "url": "https://github.com/RedPillGroup/red-beacon"
