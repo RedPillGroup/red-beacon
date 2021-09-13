@@ -1,6 +1,6 @@
 {
   "name": "@redpill-paris/red-beacon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "devDependencies": {
     "@babel/core": "^7.15.5",
