@@ -1,6 +1,6 @@
 {
   "name": "@redpill-paris/red-beacon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -12,7 +12,9 @@
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.2"
   },
-  "files": ["./dist"],
+  "files": [
+    "./dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/RedPillGroup/red-beacon"
